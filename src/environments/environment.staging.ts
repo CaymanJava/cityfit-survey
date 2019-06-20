@@ -10,6 +10,6 @@ export const environment = {
   CALENDAR_DATE_FORMAT: 'yyyy-MM-dd',
   CALENDAR_DATE_TIME_FORMAT: 'yyyy-MM-dd HH:MM',
   logger: {
-    level: Level.ERROR
+    level: Level.DEBUG
   }
 };

@@ -1,0 +1,12 @@
+<div *ngFor="let surveyQuestion of surveyQuestions">
+  <div>
+    <h4 class="question-label">{{surveyQuestion.question}}</h4>
+  </div>
+  <div class="survey-question-content">
+    <app-survey-answer
+        (answerSelected)="onAnswerSelected($event)"
+        [multiple]="surveyQuestion.multiple"
+        [surveyAnswers]="surveyQuestion.answers">
+    </app-survey-answer>
+  </div>
+</div>

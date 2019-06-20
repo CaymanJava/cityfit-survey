@@ -1,0 +1,9 @@
+<ng-multiselect-dropdown
+    (onDeSelect)="onClubSelectedOrDeselected()"
+    (onDeSelectAll)="onFilterClear()"
+    (onSelect)="onClubSelectedOrDeselected()"
+    [(ngModel)]="selectedSurvey"
+    [data]="clubs"
+    [placeholder]="'Wybierz klub'"
+    [settings]="dropdownSettings">
+</ng-multiselect-dropdown>

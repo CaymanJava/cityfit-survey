@@ -1,0 +1,9 @@
+<ng-multiselect-dropdown
+    (onDeSelect)="onSurveySelectedOrDeselected()"
+    (onDeSelectAll)="onFilterClear()"
+    (onSelect)="onSurveySelectedOrDeselected()"
+    [(ngModel)]="selectedSurvey"
+    [data]="surveys"
+    [placeholder]="'Wybierz ankietę'"
+    [settings]="dropdownSettings">
+</ng-multiselect-dropdown>

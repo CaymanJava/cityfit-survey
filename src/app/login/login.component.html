@@ -1,0 +1,15 @@
+<body>
+<div id="login">
+  <form [formGroup]="loginForm">
+    <h1>Sign In</h1>
+    <input [class.form-control-danger]="!form.username.valid && form.username.touched" class="form-control"
+           formControlName="username" id="username" placeholder="Username"
+           type="text">
+    <input [class.form-control-danger]="!form.password.valid && form.password.touched" class="form-control"
+           formControlName="password" id="password" placeholder="Password" type="password">
+    <button (click)="onSubmit()" [disabled]="!loginForm.valid">Sign in</button>
+  </form>
+</div>
+</body>
+
+

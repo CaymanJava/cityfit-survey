@@ -1,0 +1,46 @@
+<div class="config">
+
+  <div class="header">
+    <h1 class="title" id="modal-basic-title">Skonfiguruj ankietę</h1>
+  </div>
+
+  <div class="row select-field justify-content-md-center">
+    <div class="align-content-lg-center col-lg-4 col-md-4">
+      <app-campaign-select
+          (campaignSelected)="onCampaignSelected($event)">
+      </app-campaign-select>
+    </div>
+  </div>
+
+  <div class="row select-field justify-content-md-center">
+    <div class="align-content-lg-center col-lg-4 col-md-4">
+      <app-survey-select
+          (surveySelected)="onSurveySelected($event)">
+      </app-survey-select>
+    </div>
+  </div>
+
+  <div class="row select-field justify-content-md-center">
+    <div class="align-content-lg-center col-lg-4 col-md-4">
+      <app-club-select
+          (clubSelected)="onClubSelected($event)">
+      </app-club-select>
+    </div>
+  </div>
+
+  <div class="row select-field justify-content-md-center">
+    <div class="align-content-lg-center col-lg-4 col-md-4">
+      <button (click)="logout()"
+              class="btn btn-danger btn-rounded"
+              type="button">
+        Wyloguj
+      </button>
+      <button (click)="onSubmit()"
+              [disabled]="isDisabled()"
+              class="btn btn-success btn-rounded"
+              type="button">
+        Do ankiety
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div *ngIf="multipleAnswers()">
+  <label>Można dokonać wyboru kilku wariantów</label>
+  <div class="row point-answer-row">
+    <ul>
+      <li *ngFor="let answer of surveyAnswers">
+        <input (click)="processMultipleAnswer(answer.id)"
+               [checked]="isValueChecked(answer.id)"
+               type="radio">
+        <label>{{answer.description}}</label>
+        <div class="check"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <button
+        (click)="selectMultipleAnswers(multipleAnswersIds)"
+        [disabled]="multipleAnswersIds.length === 0"
+        class="survey-answer-button">Potwierdź
+    </button>
+  </div>
+</div>
+
+<div *ngIf="singleAnswer()">
+  <div *ngFor="let answer of surveyAnswers" class="row">
+    <div class="col-12">
+      <div *ngIf="predefinedSingleAnswer(answer)">
+        <button (click)="selectSingleAnswer(answer)" class="survey-answer-button">
+          <span>{{answer.description}}</span>
+        </button>
+      </div>
+
+      <div *ngIf="customAnswer(answer)">
+        <div class="row point-answer-row">
+          <label for="customAnswer">Odpowiedz:</label>
+          <input [(ngModel)]="selectedAnswer" class="form-control" id="customAnswer"/>
+        </div>
+        <div class="row">
+          <button
+              (click)="selectCustomAnswer(answer, selectedAnswer)"
+              [disabled]="!selectedAnswer"
+              class="survey-answer-button">Potwierdź
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="pointAnswer(answer)">
+        <div class="row point-answer-row">
+          <div *ngFor="let point of getPoints(answer.maxPoints)" class="d-inline-block answer-choice">
+            <span (click)="selectedAnswer = point">
+              <i (mouseout)="onMouseOver(null)"
+                 (mouseover)="onMouseOver(point)"
+                 [ngClass]="{'point-selected': selectedAnswer >= point || hoverElem >= point}" class="fa fa-star-o"></i>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <button
+              (click)="selectPointAnswer(answer, selectedAnswer)"
+              [disabled]="!selectedAnswer"
+              class="survey-answer-button">Potwierdź
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

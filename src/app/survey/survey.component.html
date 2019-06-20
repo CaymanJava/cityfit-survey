@@ -1,0 +1,150 @@
+<div class="survey">
+
+  <div class="header">
+    <h1 class="title">Czas na trening!</h1>
+    <h2 class="title">Potrzebujesz chwili na decyzję? To masz</h2>
+    <h3 class="title">Zostaw nam swój e-mail i zgarnij wejściówkę na 24 h oraz <b>50% zniżki</b> na opłatę wpisową. Dajemy Ci 7 dni!</h3>
+  </div>
+
+  <div class="row select-field justify-content-md-center">
+    <div class="box-questions align-content-lg-center col-lg-8 col-md-8 col-sm-8">
+      <form [formGroup]="memberForm">
+        <div class="row select-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-8 col-md-8 col-sm-8">
+            <div class="row select-field justify-content-md-center">
+              <label class="question-label" for="email">Adres e-mail (wymagane)</label>
+            </div>
+            <div class="row select-field justify-content-md-center">
+              <input [class.form-control-danger]="!form.email.valid && form.email.touched" [formControl]="form.email"
+                     class="form-control question-input" id="email" placeholder="Email"
+                     type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="row select-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-8 col-md-8 col-sm-8">
+            <div class="row select-field justify-content-md-center">
+              <label class="question-label" for="email">Telefon (wymagane)</label>
+            </div>
+            <div class="row select-field justify-content-md-center">
+              <input [class.form-control-danger]="!form.mobilePhone.valid && form.mobilePhone.touched" [formControl]="form.mobilePhone"
+                     class="form-control question-input" id="username" placeholder="Telefon"
+                     type="text">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row select-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-8 col-md-8 col-sm-8">
+            <app-survey-question *ngIf="survey"
+                                 [survey]="survey"
+                                 [surveyQuestions]="survey.questions">
+            </app-survey-question>
+          </div>
+        </div>
+
+
+        <div class="row agreement-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-10 col-md-10 col-sm-10">
+            <div class="row select-field justify-content-md-center">
+              <div class="align-content-lg-center col-1">
+                <input [class.form-control-danger]="!form.personalDataProcessingAgreement.valid && form.personalDataProcessingAgreement.touched"
+                       class="form-control agreement"
+                       formControlName="personalDataProcessingAgreement" id="personalDataProcessingAgreement"
+                       type="checkbox">
+                <label class="check-label" for="personalDataProcessingAgreement">
+                </label>
+              </div>
+              <div class="align-content-lg-center col-10">
+                <p class="agreement-description">Wyrażam zgodę na przetwarzanie przez podmiot wskazany poniżej moich danych osobowych w postaci adresu e-mail celem skorzystania przeze mnie z oferowanego Programu
+                  Lojalnościowego.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row agreement-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-10 col-md-10 col-sm-10">
+            <div class="row select-field justify-content-md-center">
+              <div class="align-content-lg-center col-1">
+                <input [class.form-control-danger]="!form.gymRulesAgreement.valid && form.gymRulesAgreement.touched" class="form-control agreement"
+                       formControlName="gymRulesAgreement" id="gymRulesAgreement"
+                       type="checkbox">
+                <label class="check-label" for="gymRulesAgreement">
+                </label>
+              </div>
+              <div class="align-content-lg-center col-10">
+                <p class="agreement-description">Oświadczam, iż zapoznałem się z regulaminem usługi i akceptuję jego treść.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row agreement-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-10 col-md-10 col-sm-10">
+            <div class="row select-field justify-content-md-center">
+              <div class="align-content-lg-center col-1">
+                <input [class.form-control-danger]="!form.regulationAgreement.valid && form.personalDataProcessingAgreement.touched" class="form-control agreement"
+                       formControlName="regulationAgreement" id="regulationAgreement"
+                       type="checkbox">
+                <label class="check-label" for="regulationAgreement">
+                </label>
+              </div>
+              <div class="align-content-lg-center col-10">
+                <p class="agreement-description">Zgadzam się na przetwarzanie moich danych osobowych przez podmiot wskazany poniżej w celu marketingowym, w tym na wykonywanie marketingu bezpośredniego przy użyciu
+                  urządzeń końcowych (takich jak tablety, komputery) oraz automatycznych systemów wywołujących, na podany przeze mnie adres email. Cel marketingowy obejmuje przesyłanie newslettera, informacji o
+                  wydarzeniach, konkursach, promocjach,
+                  komunikatów marketingowych dotyczących usług i produktów podmiotu wskazanego poniżej, analizowanie preferencji, aktywności i zainteresowań w celu dopasowania i umożliwienia otrzymywania sprofilowanych
+                  ofert.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row agreement-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-10 col-md-10 col-sm-10">
+            <div class="row select-field justify-content-md-center">
+              <div class="align-content-lg-center col-1">
+                <input [class.form-control-danger]="!form.marketingAgreement.valid && form.marketingAgreement.touched" class="form-control agreement"
+                       formControlName="marketingAgreement" id="marketingAgreement"
+                       type="checkbox">
+                <label class="check-label" for="marketingAgreement">
+                </label>
+              </div>
+              <div class="align-content-lg-center col-10">
+                <p class="agreement-description">Wyrażam zgodę na otrzymywanie informacji handlowych dotyczących towarów lub usług oferowanych przez podmiot wskazany poniżej na wskazany przeze mnie adres e-mail, w
+                  rozumieniu ustawy z dnia 18
+                  lipca 2002 r. o świadczeniu usług drogą elektroniczną (tj. Dz. U. 2017 r. poz. 1219).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row agreement-field justify-content-md-center">
+          <div class="align-content-lg-center col-lg-10 col-md-10 col-sm-10 seller-info">
+            <p><b>Informacja o administratorze danych osobowych:</b></p>
+            <p>
+              Informujemy, że Administratorem Danych Osobowych jest CityFit Membership Sp. z o.o. , ul. Twarda 18, 00-105, Warszawa. Państwa dane osobowe będą przetwarzane wyłącznie w celu realizacji umowy, a w celach
+              marketingowych oraz wysyłki Newslettera, jeśli wyrazili Państwo na to odrębną zgodę. Bez Państwa wyraźnej zgody dane osobowe nie będą udostępniane odbiorcom danych. Przysługuje Państwu prawo dostępu do
+              treści
+              danych, możliwość ich poprawiania oraz cofnięcia zgody na przetwarzanie danych osobowych w celach marketingowych, przesyłając informację na adres e-mail: bok@cityfit.pl. Zgody udzielają Państwo dobrowolnie.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <div class="align-content-lg-center col-lg-6 col-md-6 col-sm-6">
+            <div class="row select-field justify-content-md-center">
+              <button (click)="onSubmit()" [disabled]="!memberForm.valid" class="send-button">
+                Wyślij
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

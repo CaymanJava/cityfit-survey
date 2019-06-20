@@ -1,0 +1,214 @@
+.survey {
+  background-image: linear-gradient(to bottom, #ff004e, #009ae8);
+  //box-shadow: 0px 0px 100px black inset;
+  width: 100%;
+  height: 100%;
+  //display: block;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  //text-align: center;
+  display: inline-block;
+  overflow: auto
+}
+
+.header {
+  margin: 30px;
+}
+
+.agreement {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-image: linear-gradient(to bottom, #00c6ff, #4383cc);
+}
+
+.box-questions {
+  //width: 596px;
+  border-radius: 18px;
+  box-shadow: 0 2px 43px 10px rgba(87, 86, 86, 0.11);
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 50px;
+}
+
+.question-label {
+  //width: 291px;
+  //height: 20px;
+  //background-color: #ffffff;
+  //font-family: NexaX;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.question-input {
+  //width: 25rem;
+  //height: 36px;
+  //opacity: 0.5;
+  border-radius: 15px;
+  border: none;
+  box-shadow: inset 0 1px 6px 0 rgba(128, 128, 128, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 3.5rem;
+
+  //box-shadow: 0 2px 43px 10px rgba(87, 86, 86, 0.11);
+  //background-color: rgba(255, 255, 255, 0.15);
+  //margin-bottom: 2rem;
+}
+
+.agreement-field {
+  //text-align:center;
+  position: initial;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.select-field {
+  text-align:center;
+  position: initial;
+  margin: 20px;
+}
+
+input, select, textarea {
+  color: #ffffff;
+}
+
+//textarea:focus, input:focus {
+//  font-size: 14px;
+//  font-weight: bold;
+//  font-style: normal;
+//  font-stretch: normal;
+//  line-height: normal;
+//  letter-spacing: normal;
+//  color: #ffffff;
+//}
+
+.agreement-description {
+  //width: 361px;
+  //height: 40px;
+  //background-color: #ffffff;
+  //font-family: Nexa;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: left !important;
+}
+
+.has-danger, .form-control-danger {
+  color: #f86c6b;
+  border: #ff004e;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.seller-info {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.check-label {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 4px 0 rgba(128, 128, 128, 0.48);
+  background-color: #ffffff;
+}
+
+input, select, textarea {
+  //color: #ffffff;
+  //font-size: 14px;
+}
+
+.send-button {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 22px;
+  background-color: #ff1269;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  border: none;
+}
+
+input[type="checkbox"]:checked + label {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 2px solid #ffffff;
+  background-image: linear-gradient(to bottom, #00c6ff, #4383cc);
+}
+
+h1 {
+  //width: 280px;
+  //height: 72px;
+  //background-color: #ffffff;
+  //font-family: Nexa;
+  font-weight: 900;
+  //font-style: normal;
+  //font-stretch: normal;
+  //line-height: normal;
+  //letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+
+  //text-align:center;
+  position: initial;
+  //color: rgba(1, 1, 1, 0.42);
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+h2 {
+  //width: 472px;
+  //height: 48px;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
+}
+
+h3 {
+  //width: 481px;
+  //height: 52px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
+}

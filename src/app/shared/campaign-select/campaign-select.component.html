@@ -1,0 +1,10 @@
+<ng-multiselect-dropdown
+    (onDeSelect)="onCampaignSelectedOrDeselected()"
+    (onDeSelectAll)="onFilterClear()"
+    (onSelect)="onCampaignSelectedOrDeselected()"
+    (onSelectAll)="onSelectAll()"
+    [(ngModel)]="selectedCampaign"
+    [data]="campaign"
+    [placeholder]="'Wybierz kampanię'"
+    [settings]="dropdownSettings">
+</ng-multiselect-dropdown>
